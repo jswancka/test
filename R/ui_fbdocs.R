@@ -8,7 +8,7 @@
 #' 
 
 
-fbdocs_ui <- function(type = "tab", title = "HiDAP Documents", name= "docshidap_fieldbooks"){
+fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_fieldbooks"){
    
   #body <- dashboardBody(
   
@@ -17,20 +17,69 @@ fbdocs_ui <- function(type = "tab", title = "HiDAP Documents", name= "docshidap_
             fluidRow(
               column(width = 4,
                      box(
-                       title = "HiDAP Documentation", width = NULL, solidHeader = TRUE, status = "warning",
-                       "Box content", collapsible = TRUE,
+                       title = "HIDAP Installation Manual", width = NULL, solidHeader = TRUE, status = "warning",
+                       "", collapsible = TRUE,
                        
                        fluidRow(
-                           column(6,  shiny::actionButton("dochidap_launch", "Open",
+                           column(6,  
+                                  
+                                  shiny::HTML("<b> Installation Manual (english):</b>"),
+                                  shiny::br(),
+                                  shiny::actionButton("dochidap_install_launch_en", "Open",
                                                           icon = icon("folder-open", lib = "glyphicon"),
                                                           width = "100px",
                                                           style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
-                           ))  
+                                                          ),
+                                  shiny::br(),
+                                  shiny::br(),
+                                  shiny::HTML("<b> Installation Manual (spanish):</b>"),
+                                  shiny::br(),
+                                  shiny::actionButton("dochidap_install_launch_es", "Open",
+                                                      icon = icon("folder-open", lib = "glyphicon"),
+                                                      width = "100px",
+                                                      style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
+                                  )#,
+                                  
+                                  
+                                  
+                            )#,
+                           
+                           
                        )
-                       
-                       
-                       
                      ),
+                     
+                     box(
+                       title = "HIDAP Navigate Manual", width = NULL, solidHeader = TRUE, status = "warning",
+                       "", collapsible = TRUE,
+                       
+                       fluidRow(
+                         column(6,  
+                                
+                                shiny::HTML("<b> Navigate Manual (english):</b>"),
+                                shiny::br(),
+                                shiny::actionButton("dochidap_navig_launch_en", "Open",
+                                                    icon = icon("folder-open", lib = "glyphicon"),
+                                                    width = "100px",
+                                                    style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
+                                ),
+                                shiny::br(),
+                                shiny::br(),
+                                shiny::HTML("<b> Navigate Manual (spanish):</b>"),
+                                shiny::br(),
+                                shiny::actionButton("dochidap_navig_launch_es", "Open",
+                                                    icon = icon("folder-open", lib = "glyphicon"),
+                                                    width = "100px",
+                                                    style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
+                                )#,
+                                
+                                
+                                
+                         )#,
+                         
+                         
+                       )
+                     ),
+                            
                      box(
                        title = "PVS Documentation", width = NULL, solidHeader = TRUE, status = "primary",
                        "Participatory Varietal Selection Documentation (PVS)", collapsible = TRUE,
@@ -42,7 +91,20 @@ fbdocs_ui <- function(type = "tab", title = "HiDAP Documents", name= "docshidap_
                                                         style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
                          ))  
                        )
-                      )#,
+                      )
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
                      
                      # box(
                      #   width = NULL, background = "black",

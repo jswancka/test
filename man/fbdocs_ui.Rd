@@ -5,7 +5,7 @@
 \title{UI for HIDAP documentation
 Returns user friendly ui}
 \usage{
-fbdocs_ui(type = "tab", title = "HiDAP Documents",
+fbdocs_ui(type = "tab", title = "HIDAP Documents",
   name = "docshidap_fieldbooks")
 }
 \arguments{
