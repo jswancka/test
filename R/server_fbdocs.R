@@ -16,7 +16,7 @@ fbdocs_server <- function(input,output,session, values){
     
   #path <- fbglobal::get_base_dir()
   #pvsdoc_file <- "Diccionario_PVS.docx"
-  ruta <- system.file("extdata", "PVS_ Dictionary.pdf", package = "fbdocs")
+  ruta <- system.file("extdata", "PVS_Dictionary.pdf", package = "fbdocs")
   #path <- paste(path, pvsdoc_file, sep = "\\")
   shell.exec(ruta)
   
