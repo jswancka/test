@@ -5,9 +5,19 @@
 #' @param session shinyserver session
 #' @param values reactive values
 #' @author Omar Benites
+#' @author Reinhard Simon
 #' @export
 
 fbdocs_server <- function(input,output,session, values){
+  
+  shell_exec <- function(path) {
+    os = ifelse(Sys.info()['sysname'][[1]] == "Windows", "win", "mac")
+    if(os == "win") {
+      shell.exec(path)
+    } else {
+      system(paste("open", path))
+    }
+  }
 
   shiny::observeEvent(input$docpvsdic_launch, {
   
@@ -18,7 +28,7 @@ fbdocs_server <- function(input,output,session, values){
   #pvsdoc_file <- "Diccionario_PVS.docx"
   ruta <- system.file("extdata", "PVS_Dictionary.pdf", package = "fbdocs")
   #path <- paste(path, pvsdoc_file, sep = "\\")
-  shell.exec(ruta)
+  shell_exec(ruta)
   
     })
   })
@@ -32,7 +42,7 @@ fbdocs_server <- function(input,output,session, values){
       #pvsdoc_file <- "Diccionario_PVS.docx"
       ruta <- system.file("extdata", "Installation_Install_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
-      shell.exec(ruta)
+      shell_exec(ruta)
       
     })
   })
@@ -47,7 +57,7 @@ fbdocs_server <- function(input,output,session, values){
       #pvsdoc_file <- "Diccionario_PVS.docx"
       ruta <- system.file("extdata", "Instalacion_Instalar_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
-      shell.exec(ruta)
+      shell_exec(ruta)
       
     })
   })
@@ -61,7 +71,7 @@ fbdocs_server <- function(input,output,session, values){
       #pvsdoc_file <- "Diccionario_PVS.docx"
       ruta <- system.file("extdata", "Tutorial_Navigate_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
-      shell.exec(ruta)
+      shell_exec(ruta)
       
     })
   })
@@ -76,7 +86,7 @@ fbdocs_server <- function(input,output,session, values){
       #pvsdoc_file <- "Diccionario_PVS.docx"
       ruta <- system.file("extdata", "Tutorial_Navegar_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
-      shell.exec(ruta)
+      shell_exec(ruta)
       
     })
   })

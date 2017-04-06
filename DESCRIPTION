@@ -5,8 +5,8 @@ Authors@R: c(
   person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre")),
   person("Reinhard", "Simon", email = "rsimon64@gmail.com", role = c("aut", "ctb"))
   )
-Description: Documentation in open source softwares is very important. The 'fbdocs' package aim to make a full list of all
-             modules, files and protocolar documents in CIP experiments.  
+Description: Documentation in open source softwares is very important. The 'fbdocs' package aims to make a full list of all
+             modules, files and protocol documents of CIP experiments.  
 Depends:
     R (>= 3.3.1)
 Imports:
