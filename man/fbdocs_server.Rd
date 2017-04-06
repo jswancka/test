@@ -21,4 +21,3 @@ Server for HiDAP documents
 \author{
 Omar Benites
 }
-

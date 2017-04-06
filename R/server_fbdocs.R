@@ -30,7 +30,7 @@ fbdocs_server <- function(input,output,session, values){
       
       #path <- fbglobal::get_base_dir()
       #pvsdoc_file <- "Diccionario_PVS.docx"
-      ruta <- system.file("extdata", "Instalation - Install HIDAP.pdf", package = "fbdocs")
+      ruta <- system.file("extdata", "Installation_Install_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
       shell.exec(ruta)
       
@@ -45,7 +45,7 @@ fbdocs_server <- function(input,output,session, values){
       
       #path <- fbglobal::get_base_dir()
       #pvsdoc_file <- "Diccionario_PVS.docx"
-      ruta <- system.file("extdata", "Instalacion - Instalar HIDAP.pdf", package = "fbdocs")
+      ruta <- system.file("extdata", "Instalacion_Instalar_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
       shell.exec(ruta)
       
@@ -59,7 +59,7 @@ fbdocs_server <- function(input,output,session, values){
       
       #path <- fbglobal::get_base_dir()
       #pvsdoc_file <- "Diccionario_PVS.docx"
-      ruta <- system.file("extdata", "Tutorial - Navigate HIDAP.pdf", package = "fbdocs")
+      ruta <- system.file("extdata", "Tutorial_Navigate_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
       shell.exec(ruta)
       
@@ -74,7 +74,7 @@ fbdocs_server <- function(input,output,session, values){
       
       #path <- fbglobal::get_base_dir()
       #pvsdoc_file <- "Diccionario_PVS.docx"
-      ruta <- system.file("extdata", "Tutorial - Navegar HIDAP.pdf", package = "fbdocs")
+      ruta <- system.file("extdata", "Tutorial_Navegar_HIDAP.pdf", package = "fbdocs")
       #path <- paste(path, pvsdoc_file, sep = "\\")
       shell.exec(ruta)
       
