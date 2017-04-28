@@ -13,7 +13,7 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
   #body <- dashboardBody(
   
   shinydashboard::tabItem(tabName = name, h2(title),   
-  
+      tagList(
             fluidRow(
               column(width = 4,
                      box(
@@ -139,6 +139,7 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
               #   )
             )
       )
+  )
 
 
 }

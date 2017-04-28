@@ -1,6 +1,6 @@
 Package: fbdocs
 Title: Just launch hidap documents
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
   person("Omar", "Benites", email = "obacc07@gmail.com", role = c("aut", "cre")),
   person("Reinhard", "Simon", email = "rsimon64@gmail.com", role = c("aut", "ctb"))
