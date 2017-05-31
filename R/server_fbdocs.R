@@ -82,7 +82,34 @@ fbdocs_server <- function(input,output,session, values){
   })
   
   
+  shiny::observeEvent(input$docpvsdic_launch, {
+    
+    withProgress(message = 'Exporting manual...', value = 0, {  
+      incProgress(3/15)
+      
+      #path <- fbglobal::get_base_dir()
+      #pvsdoc_file <- "Diccionario_PVS.docx"
+      ruta <- system.file("extdata", "PVS_ Dictionary.pdf", package = "fbdocs")
+      #path <- paste(path, pvsdoc_file, sep = "\\")
+      shell.exec(ruta)
+      
+    })
+  })
   
+  
+  shiny::observeEvent(input$docpvscriteria_launch, {
+    
+    withProgress(message = 'Exporting manual...', value = 0, {  
+      incProgress(3/15)
+      
+      #path <- fbglobal::get_base_dir()
+      #pvsdoc_file <- "Diccionario_PVS.docx"
+      ruta <- system.file("extdata", "PVS_Selection_Criteria.pdf", package = "fbdocs")
+      #path <- paste(path, pvsdoc_file, sep = "\\")
+      shell.exec(ruta)
+      
+    })
+  })
   
   
   
