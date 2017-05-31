@@ -11,6 +11,7 @@
 fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_fieldbooks"){
 
   #body <- dashboardBody(
+
   #shiny::tagList(
   shinydashboard::tabItem(tabName = name, title,
 
@@ -24,6 +25,21 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
                          shiny::column(6,
 
                                   shiny::HTML("<b> Installation Manual (english):</b>"),
+
+  
+  shinydashboard::tabItem(tabName = name, h2(title),   
+  
+            fluidRow(
+              column(width = 6,
+                     box(
+                       title = "HIDAP Installation Manual", width = NULL, solidHeader = TRUE, status = "warning",
+                       "", collapsible = TRUE,
+                       
+                       fluidRow(
+                           column(6,  
+                                  
+                                  shiny::HTML("<b>English</b>"),
+
                                   shiny::br(),
                                   shiny::actionButton("dochidap_install_launch_en", "Open",
                                                           icon = shiny::icon("folder-open", lib = "glyphicon"),
@@ -32,7 +48,7 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
                                                           ),
                                   shiny::br(),
                                   shiny::br(),
-                                  shiny::HTML("<b> Installation Manual (spanish):</b>"),
+                                  shiny::HTML("<b>Spanish</b>"),
                                   shiny::br(),
                                   shiny::actionButton("dochidap_install_launch_es", "Open",
                                                       icon = shiny::icon("folder-open", lib = "glyphicon"),
@@ -42,11 +58,14 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
 
 
 
+
+
                             )#,
 
 
                        )
                      ),
+
 
                      shinydashboard::box(
                        title = "HIDAP Navigate Manual", width = NULL, solidHeader = TRUE, status = "warning",
@@ -56,6 +75,17 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
                          shiny::column(6,
 
                                 shiny::HTML("<b> Navigate Manual (english):</b>"),
+
+                     
+                     box(
+                       title = "HIDAP user's manual", width = NULL, solidHeader = TRUE, status = "warning",
+                       "", collapsible = TRUE,
+                       
+                       fluidRow(
+                         column(6,  
+                                
+                                shiny::HTML("<b>English</b>"),
+
                                 shiny::br(),
                                 shiny::actionButton("dochidap_navig_launch_en", "Open",
                                                     icon = shiny::icon("folder-open", lib = "glyphicon"),
@@ -64,7 +94,7 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
                                 ),
                                 shiny::br(),
                                 shiny::br(),
-                                shiny::HTML("<b> Navigate Manual (spanish):</b>"),
+                                shiny::HTML("<b>Spanish</b>"),
                                 shiny::br(),
                                 shiny::actionButton("dochidap_navig_launch_es", "Open",
                                                     icon = shiny::icon("folder-open", lib = "glyphicon"),
@@ -79,6 +109,7 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
 
                        )
                      ),
+
 
                      shinydashboard::box(
                        title = "PVS Documentation", width = NULL, solidHeader = TRUE, status = "primary",
@@ -105,6 +136,54 @@ fbdocs_ui <- function(type = "tab", title = "HIDAP Documents", name= "docshidap_
 
 
 
+
+
+                            
+                     box(
+                       title = "Participatory Varietal Selection Documentation", width = NULL, solidHeader = TRUE, status = "primary",
+                       "", collapsible = TRUE,
+                       
+                       fluidRow(
+                         column(6,  
+                                
+                                shiny::HTML("<b>Participatory Varietal Selection: Dictionary</b>"),
+                                shiny::br(),
+                                
+                                shiny::actionButton("docpvsdic_launch", "Open",
+                                                        icon = icon("folder-open", lib = "glyphicon"),
+                                                        width = "100px",
+                                                        style="color: #fff; background-color: #337ab7; border-color: #2e6da4"),
+                                shiny::br(),
+                                shiny::br(),
+                                shiny::HTML("<b>Participatory Varietal Selection: Selection Criteria</b>"),
+                                shiny::br(),
+                                shiny::actionButton("docpvscriteria_launch", "Open",
+                                                    icon = icon("folder-open", lib = "glyphicon"),
+                                                    width = "100px",
+                                                    style="color: #fff; background-color: #337ab7; border-color: #2e6da4"
+                                )#,
+                                
+                                
+                                
+                         )  
+                       )
+                      )#,
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
 
                      # box(
                      #   width = NULL, background = "black",
